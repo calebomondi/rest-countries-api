@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+:root {
+    --box-shad: rgba(0,0,0,0.3);
+    --clr-black: rgba(0,0,0);
+    --clr-dark-body: hsl(207, 26%, 17%);
+    --clr-dark-elem: hsl(209, 23%, 22%);
+    --clr-light-body: #ffffff;
+    --clr-light-elem: #ffffff;
+    --txt-clr: grey;
+    --icon-clr: grey;
+}
+
+/*dark mode*/
+.dark-mode {
+    --clr-light-body: hsl(207, 26%, 17%);
+    --clr-light-elem: hsl(209, 23%, 22%);
+    --clr-dark-elem: #ffffff;
+    --clr-dark: #ffffff;
+    --clr-black: #ffffff;
+    --icon-clr: #fff;
+}
+
+/*body*/
+body {
+    background-color: var(--clr-light-body);
+}
+
+/*header*/
+div.logotext, div.mode {
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    padding: 15px;
+}
+div.logotext {
+    width: 120px;
+    height: 80px;
+    margin-left: 50px;
+}
+div.logotext img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+div.mode {
+    border: 1px solid var(--clr-dark-elem);
+    color: var(--clr-dark);
+    padding: 2px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-right: 70px;
+}
+div.mode:hover {
+    cursor: pointer;
+    color: var(--clr-light-elem);
+    background-color: var(--clr-dark-elem);
+}
+header.head {
+    background-color: var(--clr-light-elem);
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 4px var(--box-shad);
+}
+
+/*search*/
+div.searchfilter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+div.search {
+    margin: 15px;
+    padding: 2px;
+    background-color: var(--clr-light-elem);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--box-shad);
+    margin-left: 50px;
+}
+div.search input {
+    width: 300px;
+    background-color: var(--clr-light-elem);
+    border: none;
+    margin: 5px auto;
+    color: var(--clr-black);
+}
+div.search input:focus {
+    outline: none;
+}
+div.search i {
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: var(--icon-clr);
+}
+div.dropdown {
+    width: 160px;
+    margin-right: 60px;
+    box-shadow: 0 2px 4px var(--box-shad);
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--clr-light-elem);
+}
+div.dropdown button {
+    background-color: var(--clr-light-elem);
+    color: var(--icon-clr);
+    border-radius: 5px;
+    margin: 9px;
+    padding: 3px;
+    width: inherit;
+    border: none;
+}
+ul.dropdown-menu {
+    background-color: var(--clr-light-elem);
+}
+ul.dropdown-menu li {
+    color: var(--icon-clr);
+}
+/*Countries*/
+div.maincontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+div.countryfacts {
+    max-width: 300px;
+    margin: 10px;
+    border: transparent;
+    background-color: var(--clr-light-elem);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--box-shad);
+}
+div.countryfacts .flags {
+    width: inherit;
+}
+div.flags img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+div.flags img:hover {
+    cursor: pointer;
+}
+div.facts {
+    width: inherit;
+    padding: 20px;
+}
+p, h5 {
+    display: inline;
+}
+p {
+    color: var(--txt-clr);
+}
+h5 {
+    font-size: 15px;
+}
+h4 {
+    line-height: 1.9;
+}
+h4, h5 {
+    color: var(--clr-black);
+}
+/*Responsiveness*/
+@media screen and (max-width:700px) {
+    div.search input {
+        width: 200px;
+    }
+}
+@media screen and (max-width:576px) {
+    div.logotext {
+        width: 100px;
+        height: 60px;
+        margin-left: 20px;
+    }
+    div.mode {
+        font-size: 10px;
+        margin-right: 30px;
+    }
+    div.searchfilter {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    div.search {
+        margin-left: 10px;
+    }
+    div.search input {
+        margin: 3px auto;
+    }
+    div.dropdown {
+        margin-right: 150px;
+    }
+    div.dropdown, div.search {
+        display: block;
+    }
+    div.search input {
+        width: 250px;
+    }
+    div.dropdown button {
+        margin: 3px auto;
+    }
+}
+@media screen and (max-width:360px) {
+    div.search {
+        margin-left: 5px;
+        margin: 10px;
+    }
+    div.search input {
+        width: 220px;
+    }
+    div.search i {
+        padding: 6px;
+        margin-left: 1px;
+        font-size: 15px;
+    }
+    div.logotext {
+        margin-left: 10px;
+    }
+    div.dropdown button {
+        margin: 2px auto;
+    }
+    div.dropdown {
+        margin-right: 94px;
+    }
+}
+@media screen and (max-width:305px) {
+    div.search input {
+        width: 205px;
+    }
+    div.dropdown {
+        margin-right: 80px;
+    }
+}
