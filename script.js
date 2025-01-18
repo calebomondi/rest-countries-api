@@ -19,7 +19,7 @@ async function renderCountries() {
         let htmlSegment = `
                         <div class="countryfacts">
                             <div class="flags">
-                                <img src="${country.flags.png}" target="_parent" href="countryfacts.html" alt="${country.name.common} flag" class="countryFlag">
+                                <img src="${country.flags.png}" href="countryfacts.html" alt="${country.name.common} flag" class="countryFlag">
                             </div>
                             <div class="facts">
                                 <h4>${country.name.common}</h4>
